@@ -1,0 +1,19 @@
+{
+  "name": "wasm-conway-life-game",
+  "version": "1.0.0",
+  "description": "Express edition of Conway's Life Game writing in AssemblyScript.",
+  "author": "VaJoy",
+  "license": "ISC",
+  "types": "./index.d.ts",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.23",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.23"
+  },
+  "scripts": {
+    "asbuild": "asc index.ts -b public/index.wasm --runtime --importMemory --sourceMap",
+    "server": "node server.js"
+  }
+}
